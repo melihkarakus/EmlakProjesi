@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmlakDbModelStoreContainer" CdmEntityContainer="EmlakDbEntities">
+    <EntitySetMapping Name="Daire">
+      <EntityTypeMapping TypeName="EmlakDbModel.Daire">
+        <MappingFragment StoreEntitySet="Daire">
+          <ScalarProperty Name="DaireId" ColumnName="DaireId" />
+          <ScalarProperty Name="DaireAdı" ColumnName="DaireAdı" />
+          <ScalarProperty Name="DaireSayısı" ColumnName="DaireSayısı" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kiralık">
+      <EntityTypeMapping TypeName="EmlakDbModel.Kiralık">
+        <MappingFragment StoreEntitySet="Kiralık">
+          <ScalarProperty Name="KiralıkId" ColumnName="KiralıkId" />
+          <ScalarProperty Name="KiraFiyat" ColumnName="KiraFiyat" />
+          <ScalarProperty Name="KiraTarihi" ColumnName="KiraTarihi" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MalSahibi">
+      <EntityTypeMapping TypeName="EmlakDbModel.MalSahibi">
+        <MappingFragment StoreEntitySet="MalSahibi">
+          <ScalarProperty Name="SahipId" ColumnName="SahipId" />
+          <ScalarProperty Name="SahipAdı" ColumnName="SahipAdı" />
+          <ScalarProperty Name="SahipSoyadı" ColumnName="SahipSoyadı" />
+          <ScalarProperty Name="SahipTc" ColumnName="SahipTc" />
+          <ScalarProperty Name="SahipEmail" ColumnName="SahipEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Müsteri">
+      <EntityTypeMapping TypeName="EmlakDbModel.Müsteri">
+        <MappingFragment StoreEntitySet="Müsteri">
+          <ScalarProperty Name="MüsteriId" ColumnName="MüsteriId" />
+          <ScalarProperty Name="MüsteriAdı" ColumnName="MüsteriAdı" />
+          <ScalarProperty Name="MüsteriSoyadı" ColumnName="MüsteriSoyadı" />
+          <ScalarProperty Name="MüsteriTc" ColumnName="MüsteriTc" />
+          <ScalarProperty Name="MüsteriMail" ColumnName="MüsteriMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Odalar">
+      <EntityTypeMapping TypeName="EmlakDbModel.Odalar">
+        <MappingFragment StoreEntitySet="Odalar">
+          <ScalarProperty Name="OdaId" ColumnName="OdaId" />
+          <ScalarProperty Name="OdaAdı" ColumnName="OdaAdı" />
+          <ScalarProperty Name="OdaSayısı" ColumnName="OdaSayısı" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Satılık">
+      <EntityTypeMapping TypeName="EmlakDbModel.Satılık">
+        <MappingFragment StoreEntitySet="Satılık">
+          <ScalarProperty Name="SatılıkId" ColumnName="SatılıkId" />
+          <ScalarProperty Name="SatılıkFiyat" ColumnName="SatılıkFiyat" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="EmlakDbModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

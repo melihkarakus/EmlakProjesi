@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="afbee747-4037-4792-98f3-652b5b9b1d61" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:60981/EmlakService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EmlakService.xsd" MetadataType="Schema" ID="e52d138d-c324-4760-95ef-a08b4566e71b" SourceId="1" SourceUrl="http://localhost:60981/EmlakService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EmlakService.disco" MetadataType="Disco" ID="ca06ed39-8fc7-4195-8716-5ec1a1ee1185" SourceId="1" SourceUrl="http://localhost:60981/EmlakService.svc?disco" />
+    <MetadataFile FileName="EmlakService1.xsd" MetadataType="Schema" ID="33606c02-3044-47cf-b93f-83f67e58b3db" SourceId="1" SourceUrl="http://localhost:60981/EmlakService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EmlakService2.xsd" MetadataType="Schema" ID="1b48865d-322d-4561-979b-512962248251" SourceId="1" SourceUrl="http://localhost:60981/EmlakService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EmlakService.wsdl" MetadataType="Wsdl" ID="c0f8ccca-b9a7-4156-88b6-4370fc8c2ba1" SourceId="1" SourceUrl="http://localhost:60981/EmlakService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

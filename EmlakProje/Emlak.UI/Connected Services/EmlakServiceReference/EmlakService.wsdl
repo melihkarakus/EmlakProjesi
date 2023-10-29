@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EmlakService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60981/EmlakService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60981/EmlakService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:60981/EmlakService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Emlak.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEmlakService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetMüsteris_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMüsteris" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetMüsteris_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMüsterisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetDaires_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDaires" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetDaires_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDairesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetOdalars_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOdalars" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetOdalars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOdalarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddMüsteri_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMüsteri" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddMüsteri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMüsteriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveMüsteri_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMüsteri" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveMüsteri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMüsteriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditMüsteri_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditMüsteri" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditMüsteri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditMüsteriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddOda_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOda" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddOda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOdaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveOda_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveOda" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveOda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveOdaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditOda_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditOda" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditOda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditOdaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddDaire_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDaire" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddDaire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDaireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveDaire_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveDaire" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveDaire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveDaireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditDaire_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditDaire" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditDaire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditDaireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetMalSahibis_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMalSahibis" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetMalSahibis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMalSahibisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddMalSahibi_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMalSahibi" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddMalSahibi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMalSahibiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveMalSahibi_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMalSahibi" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveMalSahibi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMalSahibiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditMalSahibi_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditMalSahibi" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditMalSahibi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditMalSahibiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetKiralıks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKiralıks" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetKiralıks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKiralıksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddKiralık_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddKiralık" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddKiralık_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddKiralıkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveKiralık_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveKiralık" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveKiralık_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveKiralıkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditKiralık_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditKiralık" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditKiralık_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditKiralıkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetSatılıks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSatılıks" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_GetSatılıks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSatılıksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddSatılık_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSatılık" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_AddSatılık_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSatılıkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveSatılık_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSatılık" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_RemoveSatılık_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSatılıkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditSatılık_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditSatılık" />
+  </wsdl:message>
+  <wsdl:message name="IEmlakService_EditSatılık_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditSatılıkResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEmlakService">
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/GetUsers" message="tns:IEmlakService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/GetUsersResponse" message="tns:IEmlakService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMüsteris">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/GetMüsteris" message="tns:IEmlakService_GetMüsteris_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/GetMüsterisResponse" message="tns:IEmlakService_GetMüsteris_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDaires">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/GetDaires" message="tns:IEmlakService_GetDaires_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/GetDairesResponse" message="tns:IEmlakService_GetDaires_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOdalars">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/GetOdalars" message="tns:IEmlakService_GetOdalars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/GetOdalarsResponse" message="tns:IEmlakService_GetOdalars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMüsteri">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/AddMüsteri" message="tns:IEmlakService_AddMüsteri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/AddMüsteriResponse" message="tns:IEmlakService_AddMüsteri_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMüsteri">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/RemoveMüsteri" message="tns:IEmlakService_RemoveMüsteri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/RemoveMüsteriResponse" message="tns:IEmlakService_RemoveMüsteri_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditMüsteri">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/EditMüsteri" message="tns:IEmlakService_EditMüsteri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/EditMüsteriResponse" message="tns:IEmlakService_EditMüsteri_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/AddOda" message="tns:IEmlakService_AddOda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/AddOdaResponse" message="tns:IEmlakService_AddOda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveOda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/RemoveOda" message="tns:IEmlakService_RemoveOda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/RemoveOdaResponse" message="tns:IEmlakService_RemoveOda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditOda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/EditOda" message="tns:IEmlakService_EditOda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/EditOdaResponse" message="tns:IEmlakService_EditOda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDaire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/AddDaire" message="tns:IEmlakService_AddDaire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/AddDaireResponse" message="tns:IEmlakService_AddDaire_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDaire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/RemoveDaire" message="tns:IEmlakService_RemoveDaire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/RemoveDaireResponse" message="tns:IEmlakService_RemoveDaire_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditDaire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/EditDaire" message="tns:IEmlakService_EditDaire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/EditDaireResponse" message="tns:IEmlakService_EditDaire_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMalSahibis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/GetMalSahibis" message="tns:IEmlakService_GetMalSahibis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/GetMalSahibisResponse" message="tns:IEmlakService_GetMalSahibis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMalSahibi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/AddMalSahibi" message="tns:IEmlakService_AddMalSahibi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/AddMalSahibiResponse" message="tns:IEmlakService_AddMalSahibi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMalSahibi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/RemoveMalSahibi" message="tns:IEmlakService_RemoveMalSahibi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/RemoveMalSahibiResponse" message="tns:IEmlakService_RemoveMalSahibi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditMalSahibi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/EditMalSahibi" message="tns:IEmlakService_EditMalSahibi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/EditMalSahibiResponse" message="tns:IEmlakService_EditMalSahibi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKiralıks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/GetKiralıks" message="tns:IEmlakService_GetKiralıks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/GetKiralıksResponse" message="tns:IEmlakService_GetKiralıks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddKiralık">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/AddKiralık" message="tns:IEmlakService_AddKiralık_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/AddKiralıkResponse" message="tns:IEmlakService_AddKiralık_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveKiralık">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/RemoveKiralık" message="tns:IEmlakService_RemoveKiralık_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/RemoveKiralıkResponse" message="tns:IEmlakService_RemoveKiralık_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditKiralık">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/EditKiralık" message="tns:IEmlakService_EditKiralık_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/EditKiralıkResponse" message="tns:IEmlakService_EditKiralık_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSatılıks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/GetSatılıks" message="tns:IEmlakService_GetSatılıks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/GetSatılıksResponse" message="tns:IEmlakService_GetSatılıks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSatılık">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/AddSatılık" message="tns:IEmlakService_AddSatılık_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/AddSatılıkResponse" message="tns:IEmlakService_AddSatılık_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSatılık">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/RemoveSatılık" message="tns:IEmlakService_RemoveSatılık_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/RemoveSatılıkResponse" message="tns:IEmlakService_RemoveSatılık_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditSatılık">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmlakService/EditSatılık" message="tns:IEmlakService_EditSatılık_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmlakService/EditSatılıkResponse" message="tns:IEmlakService_EditSatılık_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEmlakService" type="tns:IEmlakService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMüsteris">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/GetMüsteris" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDaires">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/GetDaires" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOdalars">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/GetOdalars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMüsteri">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/AddMüsteri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMüsteri">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/RemoveMüsteri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditMüsteri">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/EditMüsteri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOda">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/AddOda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveOda">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/RemoveOda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditOda">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/EditOda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDaire">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/AddDaire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDaire">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/RemoveDaire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditDaire">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/EditDaire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMalSahibis">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/GetMalSahibis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMalSahibi">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/AddMalSahibi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMalSahibi">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/RemoveMalSahibi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditMalSahibi">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/EditMalSahibi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKiralıks">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/GetKiralıks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddKiralık">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/AddKiralık" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveKiralık">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/RemoveKiralık" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditKiralık">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/EditKiralık" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSatılıks">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/GetSatılıks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSatılık">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/AddSatılık" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSatılık">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/RemoveSatılık" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditSatılık">
+      <soap:operation soapAction="http://tempuri.org/IEmlakService/EditSatılık" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmlakService">
+    <wsdl:port name="BasicHttpBinding_IEmlakService" binding="tns:BasicHttpBinding_IEmlakService">
+      <soap:address location="http://localhost:60981/EmlakService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

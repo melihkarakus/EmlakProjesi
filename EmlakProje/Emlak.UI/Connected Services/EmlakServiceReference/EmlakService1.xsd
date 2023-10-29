@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Emlak.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Emlak.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Users">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Users" nillable="true" type="tns:Users" />
+  <xs:complexType name="ArrayOfMüsteri">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Müsteri" nillable="true" type="tns:Müsteri" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMüsteri" nillable="true" type="tns:ArrayOfMüsteri" />
+  <xs:complexType name="Müsteri">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MüsteriAdı" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MüsteriId" type="xs:int" />
+      <xs:element minOccurs="0" name="MüsteriMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MüsteriSoyadı" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MüsteriTc" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Müsteri" nillable="true" type="tns:Müsteri" />
+  <xs:complexType name="ArrayOfDaire">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Daire" nillable="true" type="tns:Daire" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDaire" nillable="true" type="tns:ArrayOfDaire" />
+  <xs:complexType name="Daire">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DaireAdı" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DaireId" type="xs:int" />
+      <xs:element minOccurs="0" name="DaireSayısı" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Daire" nillable="true" type="tns:Daire" />
+  <xs:complexType name="ArrayOfOdalar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Odalar" nillable="true" type="tns:Odalar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOdalar" nillable="true" type="tns:ArrayOfOdalar" />
+  <xs:complexType name="Odalar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OdaAdı" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OdaId" type="xs:int" />
+      <xs:element minOccurs="0" name="OdaSayısı" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Odalar" nillable="true" type="tns:Odalar" />
+  <xs:complexType name="ArrayOfMalSahibi">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MalSahibi" nillable="true" type="tns:MalSahibi" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMalSahibi" nillable="true" type="tns:ArrayOfMalSahibi" />
+  <xs:complexType name="MalSahibi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SahipAdı" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SahipEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SahipId" type="xs:int" />
+      <xs:element minOccurs="0" name="SahipSoyadı" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SahipTc" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MalSahibi" nillable="true" type="tns:MalSahibi" />
+  <xs:complexType name="ArrayOfKiralık">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Kiralık" nillable="true" type="tns:Kiralık" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKiralık" nillable="true" type="tns:ArrayOfKiralık" />
+  <xs:complexType name="Kiralık">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KiraFiyat" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="KiraTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KiralıkId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Kiralık" nillable="true" type="tns:Kiralık" />
+  <xs:complexType name="ArrayOfSatılık">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Satılık" nillable="true" type="tns:Satılık" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSatılık" nillable="true" type="tns:ArrayOfSatılık" />
+  <xs:complexType name="Satılık">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SatılıkFiyat" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SatılıkId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Satılık" nillable="true" type="tns:Satılık" />
+</xs:schema>

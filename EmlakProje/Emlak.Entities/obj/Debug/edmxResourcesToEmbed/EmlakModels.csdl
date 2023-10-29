@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmlakDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Daire">
+    <Key>
+      <PropertyRef Name="DaireId" />
+    </Key>
+    <Property Name="DaireId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DaireAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DaireSayısı" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Kiralık">
+    <Key>
+      <PropertyRef Name="KiralıkId" />
+    </Key>
+    <Property Name="KiralıkId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KiraFiyat" Type="Int32" />
+    <Property Name="KiraTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MalSahibi">
+    <Key>
+      <PropertyRef Name="SahipId" />
+    </Key>
+    <Property Name="SahipId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SahipAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SahipSoyadı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SahipTc" Type="Int32" />
+    <Property Name="SahipEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Müsteri">
+    <Key>
+      <PropertyRef Name="MüsteriId" />
+    </Key>
+    <Property Name="MüsteriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MüsteriAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MüsteriSoyadı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MüsteriTc" Type="Int32" />
+    <Property Name="MüsteriMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Odalar">
+    <Key>
+      <PropertyRef Name="OdaId" />
+    </Key>
+    <Property Name="OdaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OdaAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OdaSayısı" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Satılık">
+    <Key>
+      <PropertyRef Name="SatılıkId" />
+    </Key>
+    <Property Name="SatılıkId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SatılıkFiyat" Type="Int32" />
+    <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="EmlakDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Daire" EntityType="Self.Daire" />
+    <EntitySet Name="Kiralık" EntityType="Self.Kiralık" />
+    <EntitySet Name="MalSahibi" EntityType="Self.MalSahibi" />
+    <EntitySet Name="Müsteri" EntityType="Self.Müsteri" />
+    <EntitySet Name="Odalar" EntityType="Self.Odalar" />
+    <EntitySet Name="Satılık" EntityType="Self.Satılık" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+  </EntityContainer>
+</Schema>

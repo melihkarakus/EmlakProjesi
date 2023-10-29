@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmlakDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Daire">
+    <Key>
+      <PropertyRef Name="DaireId" />
+    </Key>
+    <Property Name="DaireId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DaireAdı" Type="varchar" MaxLength="50" />
+    <Property Name="DaireSayısı" Type="int" />
+  </EntityType>
+  <EntityType Name="Kiralık">
+    <Key>
+      <PropertyRef Name="KiralıkId" />
+    </Key>
+    <Property Name="KiralıkId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KiraFiyat" Type="int" />
+    <Property Name="KiraTarihi" Type="date" />
+    <Property Name="Adres" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MalSahibi">
+    <Key>
+      <PropertyRef Name="SahipId" />
+    </Key>
+    <Property Name="SahipId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SahipAdı" Type="varchar" MaxLength="50" />
+    <Property Name="SahipSoyadı" Type="varchar" MaxLength="50" />
+    <Property Name="SahipTc" Type="int" />
+    <Property Name="SahipEmail" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Müsteri">
+    <Key>
+      <PropertyRef Name="MüsteriId" />
+    </Key>
+    <Property Name="MüsteriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MüsteriAdı" Type="varchar" MaxLength="50" />
+    <Property Name="MüsteriSoyadı" Type="varchar" MaxLength="50" />
+    <Property Name="MüsteriTc" Type="int" />
+    <Property Name="MüsteriMail" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Odalar">
+    <Key>
+      <PropertyRef Name="OdaId" />
+    </Key>
+    <Property Name="OdaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OdaAdı" Type="varchar" MaxLength="50" />
+    <Property Name="OdaSayısı" Type="int" />
+  </EntityType>
+  <EntityType Name="Satılık">
+    <Key>
+      <PropertyRef Name="SatılıkId" />
+    </Key>
+    <Property Name="SatılıkId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SatılıkFiyat" Type="int" />
+    <Property Name="Adres" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'EmlakDb.dbo.Semtler' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Semtler">
+          <Property Name="SemtAdı" Type="varchar" MaxLength="50" />
+          <Property Name="SemtDurumu" Type="bit" />
+        </EntityType>-->
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="EmlakDbModelStoreContainer">
+    <EntitySet Name="Daire" EntityType="Self.Daire" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kiralık" EntityType="Self.Kiralık" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MalSahibi" EntityType="Self.MalSahibi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Müsteri" EntityType="Self.Müsteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Odalar" EntityType="Self.Odalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Satılık" EntityType="Self.Satılık" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
